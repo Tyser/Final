@@ -8,9 +8,10 @@
     <!---- END FAVICON ---->
     
     <!---- CALENDAR ---->
-    <script src="bower_components/moment/moment.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-calendar/src/calendar.js"></script>
     <!----END CALENDAR ---->
     
     <!---- ANGULAR SCRIPT---->   
@@ -30,6 +31,10 @@
 <body ng-app="trackerApp">
     <h1>Welcome to All Purpose Tracker</h1>
     <h2>Track your daily activities</h2>
+    
+<div ng-controller="CalendarCtrl">
+    <div ui-calendar ng-model="eventSources"></div>
+</div>
     
 
 <script src="scripts/app.js"></script>
