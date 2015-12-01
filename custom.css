@@ -1,0 +1,127 @@
+/* BODY */
+body {
+    background-image: url("images/maxresdefault.jpg");
+    padding-bottom: 35px;
+}
+
+
+
+
+/* HEADER */
+div.header {
+	text-align: center;
+    background-image: url("images/featured-space-policy.jpg");
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fff;
+    margin: auto;
+    height: 168px;
+    margin: auto;
+    margin-top: 47px;
+    border-bottom: double 10px #4C555D;
+    border-top: groove 10px #4C555D;
+}
+
+
+
+
+/* CALANDER */
+.calander {
+    padding-top: 30px;
+    background-color: blue;
+    background: transparent;
+}
+.container {
+    color: #fff;    
+}
+.tr {
+    color: #fff;
+}
+
+
+
+/* IMAGES */
+.brand {
+    margin: 5px;
+}
+
+
+
+
+/* NAVIGATION */
+.navbar-default .navbar-brand {
+    color: #1D00EA;
+}
+
+
+
+/* FOOTER */
+.footer {
+    border: groove 10px #fff;
+}
+
+
+
+
+/* BUTTONS */
+.btn-default {
+    color: #000;
+    border-color: #ccc;
+}
+.btn-default:hover {
+    color: #fff;
+    background-color: #26262D;
+    border-color: #adadad;
+}
+
+
+
+
+/* Colors
+--------------------------------------------------------------------------------------------------*/
+
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-popover {
+	border-color: #ddd;
+}
+
+.fc-unthemed .fc-popover {
+	background-color: #fff;
+}
+
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-popover .fc-header {
+	background: #eee;
+}
+
+.fc-unthemed .fc-popover .fc-header .fc-close {
+	color: #666;
+}
+
+.fc-unthemed .fc-today {
+	background: #525252;
+}
+
+.fc-highlight { /* when user is selecting cells */
+	background: #bce8f1;
+	opacity: .3;
+	filter: alpha(opacity=30); /* for IE */
+}
+
+.fc-bgevent { /* default look for background events */
+	background: rgb(143, 223, 130);
+	opacity: .3;
+	filter: alpha(opacity=30); /* for IE */
+}
+
+.fc-nonbusiness { /* default look for non-business-hours areas */
+	/* will inherit .fc-bgevent's styles */
+	background: #d7d7d7;
+}

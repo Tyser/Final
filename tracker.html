@@ -2,40 +2,92 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
     <!---- FAVICON ---->
     <link rel="icon" type="image/png" href="images/favicon.ico" />
     <!---- END FAVICON ---->
-    
+
     <!---- CALENDAR ---->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-ui-calendar/src/calendar.js"></script>
-    <!----END CALENDAR ---->
-    
-    <!---- ANGULAR SCRIPT---->   
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-ui/build/angular-ui.js"></script>
+    <script type="text/javascript" src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="bower_components/fullcalendar/dist/gcal.js"></script>
     <!---- END ANGULAR SCRIPT---->
-    
+
     <!---- BOOTSTRAP ---->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <!---- END BOOTSTRAP ---->
-    
+
     <link rel="stylesheet" href="bower_components/angular-ui/build/angular-ui.min.css" />
-    
+    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css"/>
+    <link rel="stylesheet" href="custom.css">
+
     <title>All Purpose Tracker</title>
 </head>
-
+    
+    
 <body ng-app="trackerApp">
-    <h1>Welcome to All Purpose Tracker</h1>
-    <h2>Track your daily activities</h2>
     
+     <div class="header">
+            <h1 class="header">Welcome to All Purpose Tracker</h1>
+            <h2 class="header">Track your daily activities</h2>
+    </div>
+         
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+     <img class="brand" alt="Brand" src="images/Web-Traffic-icon.png">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Search Activity</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-pills" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav><!-- /End Navigation -->
+
+
+
 <div ng-controller="CalendarCtrl">
-    <div ui-calendar ng-model="eventSources"></div>
+    <div class="container">
+         <div ui-calendar ng-model="eventSources" class="calander"></div>
+    </div>
 </div>
-    
+
+<footer>&copy Tyler Burgess All Tracking App.</footer>    
 
 <script src="scripts/app.js"></script>
 </body>
