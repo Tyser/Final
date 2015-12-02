@@ -19,7 +19,7 @@ div.header {
     margin: auto;
     height: 168px;
     margin: auto;
-    margin-top: 47px;
+    margin-top: 97px;
     border-bottom: double 10px #4C555D;
     border-top: groove 10px #4C555D;
 }
@@ -33,12 +33,21 @@ div.header {
     background-color: blue;
     background: transparent;
 }
-.container {
-    color: #fff;    
-}
 .tr {
     color: #fff;
 }
+.fc {
+    color: #fff;
+}
+.fc-view-container {
+    color: #fff;
+    background-image: url("images/feaetured-space-policy.jpg");
+    background-color: #98a0a8;
+}
+.fc-widget-header {
+    background-color: #003366;
+}
+
 
 
 
@@ -57,9 +66,11 @@ div.header {
 
 
 
+
 /* FOOTER */
 .footer {
-    border: groove 10px #fff;
+    text-align: center;
+    color: #fff;
 }
 
 
@@ -75,7 +86,9 @@ div.header {
     background-color: #26262D;
     border-color: #adadad;
 }
-
+.btn {
+    margin-top: 5px;
+}
 
 
 

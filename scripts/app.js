@@ -18,6 +18,8 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
             currentTimezone: 'America/Chicago' // an option!
     };
     
+    
+    
     /* event source that contains custom events on the scope */
     $scope.events = [
       {title: 'All Day Event',start: new Date(y, m, 1)},
