@@ -79,16 +79,21 @@ div.header {
 /* BUTTONS */
 .btn-default {
     color: #000;
-    border-color: #ccc;
+    border-color: #747474;
 }
 .btn-default:hover {
     color: #fff;
     background-color: #26262D;
-    border-color: #adadad;
+    border-color: #00569B;
 }
-.btn {
+.btn2 {
+    color: #000;
+    border-color: #ccc;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
     margin-top: 5px;
 }
+
 
 
 

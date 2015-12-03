@@ -77,17 +77,33 @@
 </nav><!-- /End Navigation -->
 </diV>
 
-<div>
-     <button type="submit" class="btn btn-default" class="events">Add Event</button>
-     <button type="submit" class="btn btn-default" class="events">Remove Event</button>
-</div>
+     
 
-<!-- CALENDAR CONTROL -->
+<!-- CALENDAR CONTROL CONTAINTER-->
 <div ng-controller="CalendarCtrl">
-    <div class="container"> 
+    <div class="container">
+               <button type="submit" class="btn2 btn-default" ng-click="showAddEvent=true">Add Event</button>
+               <button type="submit" class="btn2 btn-default">Remove Event</button>
+     <form ng-show="showAddEvent">
+          <div class="form-group">
+               <label for="event">Add Event</label>
+               <input ng-model="Event" type="text" class="form-control" id="event" placeholder="Event">
+          </div>
+          
+          <div class="form-group">
+                <label for="eventDate">Date</label>
+                <input ng-model="eventDate" type="date" class="form-control" id="eventDate" placeholder="Date">
+          </div>
+         
+               <button type="button" class="btn btn-default" ng-click="addCustomEvent()">Submit</button>
+     </form>
+               
           <div ui-calendar ng-model="eventSources" class="calander"></div>
+          
+          
+  
     </div>
-</div><!-- END: CALENDAR CONTROL -->
+</div><!-- END: CALENDAR CONTROL CONTAINER -->
 
 <footer class="footer">&copy; (Angular Code): http://angular-ui.github.io/ui-calendar/ &mdash; Tyler Burgess All Purpose Tracking App. &mdash; Angular Calendars INC.</footer>    
 

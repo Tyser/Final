@@ -1,4 +1,4 @@
-var trackerApp = angular.module('trackerApp', ['ui.calendar']);                 
+var trackerApp = angular.module('trackerApp', ['ui.calendar']);
 /**
  * calendarDemoApp - 0.9.0
  */
@@ -8,6 +8,8 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();
+    
+    var selectedEvent = null;
     
     $scope.changeTo = 'Hungarian';
     
@@ -21,12 +23,21 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
     
     
     /* event source that contains custom events on the scope */
-    $scope.events = [
-      {title: 'All Day Event',start: new Date(y, m, 1)},
-      {title: 'Long Event',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
-      
-      {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
-    ];
+    $scope.events = [{title: 'All Day Event',start: new Date(y, m, 1)},];
+    
+    $scope.addCustomEvent = function() {
+        $scope.events.push({
+            title: $scope.Event,
+            start: new Date($scope.eventDate)
+        });
+        $scope.Event="",
+        $scope.eventDate = null;
+        $scope.showAddEvent = false;
+        console.log($scope.events);
+    };
+    
+  
+
     
     /* event source that calls a function on every view switch */
     $scope.eventsF = function (start, end, timezone, callback) {
@@ -50,6 +61,7 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
     /* alert on eventClick */
     $scope.alertOnEventClick = function( date, jsEvent, view){
         $scope.alertMessage = (date.title + ' was clicked ');
+        console.log(date, jsEvent, view);
     };
     
     /* alert on Drop */
@@ -76,15 +88,6 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
       }
     };
     
-    /* add custom event*/
-    $scope.addEvent = function() {
-      $scope.events.push({
-        title: 'Open Sesame',
-        start: new Date(y, m, 28),
-        end: new Date(y, m, 29),
-        className: ['openSesame']
-      });
-    };
     
     /* remove event */
     $scope.remove = function(index) {
@@ -140,7 +143,7 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
     };
     
     /* event sources array*/
-    $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
+    $scope.eventSources = [$scope.events];
     $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
 });
 /* EOF */
