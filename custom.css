@@ -47,7 +47,12 @@ div.header {
 .fc-widget-header {
     background-color: #003366;
 }
-
+.event {
+    color: #fff;
+    padding-top: 10px;
+    width: 186px;
+    height: 200px;
+}
 
 
 
