@@ -83,7 +83,7 @@
 <div ng-controller="CalendarCtrl">
     <div class="container">
                <button type="submit" class="btn2 btn-default" ng-click="showAddEvent=true">Add Event</button>
-               <button type="submit" class="btn2 btn-default">Remove Event</button>
+               <button type="submit" class="btn2 btn-default" ng-click="removeAddEvent=true">Remove Event</button>
                
      <form ng-show="showAddEvent" class="event">
           <div class="form-group">
@@ -98,12 +98,8 @@
          
                <button type="button" class="btn btn-default" ng-click="addCustomEvent()">Submit</button>
      </form>
-               
-          <div ui-calendar ng-model="eventSources" class="calander"></div>
-          
-          
-  
-    </div>
+     
+     <div ui-calendar="uiConfig.calendar" ng-model="eventSources">
 </div><!-- END: CALENDAR CONTROL CONTAINER -->
 
 <footer class="footer">&copy; (Angular Code): http://angular-ui.github.io/ui-calendar/ &mdash; Tyler Burgess All Purpose Tracking App. &mdash; Angular Calendars INC.</footer>    

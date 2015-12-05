@@ -116,7 +116,7 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
     /* config object */
     $scope.uiConfig = {
       calendar:{
-        height: 450,
+        height: 700,
         editable: true,
         header:{
           left: 'title',
