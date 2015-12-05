@@ -23,7 +23,7 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
     
     
     /* event source that contains custom events on the scope */
-    $scope.events = [{title: 'All Day Event',start: new Date(y, m, 1)},];
+    $scope.events = [];
     
     $scope.addCustomEvent = function() {
         $scope.events.push({
@@ -36,7 +36,6 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
         console.log($scope.events);
     };
     
-  
 
     
     /* event source that calls a function on every view switch */
@@ -45,7 +44,7 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
       var e = new Date(end).getTime() / 1000;
       var m = new Date(start).getMonth();
       var events = [{title: 'Feed Me ' + m,start: s + (50000),end: s + (100000),allDay: false, className: ['customFeed']}];
-      callback(events);
+      removeAddEvents(events);
     };
 
     $scope.calEventsExt = {
@@ -61,6 +60,8 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
     /* alert on eventClick */
     $scope.alertOnEventClick = function( date, jsEvent, view){
         $scope.alertMessage = (date.title + ' was clicked ');
+
+
         console.log(date, jsEvent, view);
     };
     
@@ -114,9 +115,10 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
     };
     
     /* config object */
+    $scope.removeClickHandler = function() {};
     $scope.uiConfig = {
       calendar:{
-        height: 700,
+        height: 725,
         editable: true,
         header:{
           left: 'title',
