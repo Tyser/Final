@@ -36,7 +36,6 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
         console.log($scope.events);
     };
     
-
     
     /* event source that calls a function on every view switch */
     $scope.eventsF = function (start, end, timezone, callback) {
@@ -90,14 +89,32 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
     };
     
     
+    
+    
+    
+    
+    
+    /* MY EDIT HOW TO REMOVE AN EVENT */
+    //$scope.remove = function(events){
+        //$scope.events.splice( $scope.events.indexOf(events), 1);
+    //}
+//}
+    
+    
+    
+    
+    
+    
+    
+    
     /* remove event */
-    $scope.remove = function(index) {
-      $scope.events.splice(index,1);
+    $scope.remove = function(events) {
+       $scope.events.splice($scope.events.indexOf(events),1);
     };
     
     /* Change View */
     $scope.changeView = function(view,calendar) {
-      uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
+     uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
     };
     
     /* Change View */
@@ -115,7 +132,6 @@ trackerApp.controller('CalendarCtrl', function CalendarCtrl($scope,$compile,uiCa
     };
     
     /* config object */
-    $scope.removeClickHandler = function() {};
     $scope.uiConfig = {
       calendar:{
         height: 725,
